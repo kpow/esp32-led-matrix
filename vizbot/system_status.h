@@ -19,11 +19,11 @@ struct SystemStatus {
   bool webServerReady;
   bool dnsReady;
   bool mdnsReady;
-  bool settingsLoaded;
+  bool staConnected;     // STA connected to external network
   IPAddress apIP;
+  IPAddress staIP;       // IP on external network (when STA connected)
   uint32_t bootTimeMs;
   uint8_t failCount;
-  uint8_t bootReason;      // esp_reset_reason() value
 };
 
 extern SystemStatus sysStatus;
